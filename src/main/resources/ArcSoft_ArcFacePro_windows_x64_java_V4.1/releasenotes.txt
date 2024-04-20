@@ -1,0 +1,82 @@
+﻿////////////////////////////////////////////////////////////////////////////////
+//                   ArcSoft FaceEngine SDK 		                      //        
+////////////////////////////////////////// /////////////////////////////////////
+
+Introduction:
+ArcSoft FaceEngine SDK provides the universal interfaces to detect the face information of face, like face detection, age estimation, gender estimation,face angle detection,face recognition.
+
+Publish date:
+2021-07-23
+
+Version:
+4.1.3902020201.1
+
+Supported platform:
+WIN64
+
+Compile Options:
+default
+
+Dependency:
+None
+
+Known issues:
+None.
+
+File List:
+|---doc
+|   |---ARCSOFT_ARC_FACE_JAVA_DEVELOPER'S_GUIDE.pdf
+|---libs
+|   |--WIN64
+|   |   |---libarcsoft_face.dll                 Library
+|   |   |---libarcsoft_face_engine.dll          Library
+|   |   |---libarcsoft_face_engine_jni.dll      Library
+|   |--arcsoft-sdk-face-4.1.1.0.jar
+|---samplecode
+|   |---FaceEngineTest.java
+|---releasenotes.txt
+
+
+Change Logs:
+2021/07/22
+1.支持最大检测50张人脸。
+2.增加脸部各器官遮挡属性检测。
+3.增加睁眼、张嘴状态、人脸溢出图片、是否戴眼镜、墨镜属性检测。
+4.修改接口，去掉原来的 getFace3DAngle、getFaceLandMark、setFaceShelterParam接口。
+5.增加 setFaceAttributeParam人脸属性阈值设置接口。 
+6.将额头区域、3D角度检测结果放在多人脸结构体中进行输出。
+7.更新算法库，优化性能和效果。
+8.支持1：N搜索。
+9.更新活体算法；
+10.Linux64降低GLBCXX/GLBC基础库依赖，最低要求为GLBCXX 3.4.19/GLBC 2.17
+
+2021/01/22
+1. 更新算法库，优化性能和效果；
+2. 优化图像质量接口，并支持口罩和非口罩的场景，基于场景精细化设置阈值；
+3. 初始化接口删除scale参数，内部Image模式使用27的模型，Video模式使用16的模型；
+4. 人脸比对兼容口罩场景，根据接口，结合应用场景进行使用；
+5. 人脸检测接口输出睁闭眼、是否带眼镜以及遮挡检测；
+6. 支持口罩、额头区域检测；
+7. 修改特征提取接口，兼容口罩模型；
+8. 最大检测人脸数最多支持10张；
+9. 修改多人脸、单人脸结构体；
+10. 新增更新人脸信息接口，更新FaceData数据，一般用于双目对齐等策略；
+
+2020-05-26
+1、更新活体算法；
+2、更新特征提取算法并可设置多线程操作；
+3、添加图像质量检测功能；
+4、添加设备信息采集接口；
+5、删除旧的在线激活接口；
+
+2019-12-17
+1、更新活体、年龄、性别、人脸检测、人脸比对算法模型；
+2、IMAGE模式支持全角度以及单一角度；
+3、新增人证模式的人脸特征比对模型；
+4、新增一组接口，用于兼容更高精度的图像
+5、全角度枚举ASF_OP_0_HIGHER_EXT变更为ASF_OP_ALL_OUT；
+6、此版本对人脸特征模型进行了升级，导致与2.X版本的模型不匹配，需要对2.X版本的人脸库进行重新注册；
+7、活体检测推荐阈值变更，RGB：0.5  IR：0.7；
+
+2019-07-19
+Initial Version
