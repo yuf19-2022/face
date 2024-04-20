@@ -79,7 +79,8 @@ public class FaceEngineTest {
         System.out.println("特征值大小：" + faceFeature.getFeatureData().length);
 
         //人脸检测2
-        ImageInfo imageInfo2 = getRGBData(FileUtil.file("ArcSoft_ArcFace_Java_Windows_x64_V3.0/images/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG.jpg"));
+//        ImageInfo imageInfo2 = getRGBData(FileUtil.file("ArcSoft_ArcFace_Java_Windows_x64_V3.0/images/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG.jpg"));
+        ImageInfo imageInfo2 = getRGBData(FileUtil.file("ArcSoft_ArcFace_Java_Windows_x64_V3.0/images/u=324341005,1864264518&fm=253&fmt=auto&app=120&f=JPEG.jpg"));
         List<FaceInfo> faceInfoList2 = new ArrayList<FaceInfo>();
         errorCode = faceEngine.detectFaces(imageInfo2.getImageData(), imageInfo2.getWidth(), imageInfo2.getHeight(),imageInfo2.getImageFormat(), faceInfoList2);
         System.out.println(faceInfoList2);
